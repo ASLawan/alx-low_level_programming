@@ -13,7 +13,7 @@ int num = 1024, n = 0, sum = 0;
 
 while (n < num)
 {
-if (n % 5 == 0 || n % 3 == 0)
+if ((n % 5) == 0 || (n % 3) == 0)
 {
 sum += n;
 }
