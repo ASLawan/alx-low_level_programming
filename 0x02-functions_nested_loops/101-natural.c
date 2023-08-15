@@ -9,16 +9,15 @@
 
 int main(void)
 {
-int num = 1024, n = 0, sum = 0;
+	int count, sum = 0;
 
-while (n < num)
-{
-if ((n % 5) == 0 || (n % 3) == 0)
-{
-sum += n;
-}
-n++;
-}
-printf("%d", sum);
-return (0);
+	for (count = 1; count < 1024; count++)
+	{
+		if ((count % 3) == 0 || (count % 5) == 0)
+		{
+			sum += count;
+		}
+	}
+	printf("\n", sum);
+	return (0);
 }
