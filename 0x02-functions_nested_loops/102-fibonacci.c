@@ -13,12 +13,12 @@ long int first, second, next;
 
 first = 1;
 second = 2;
-printf("%d, ", first);
-printf("%d, ", second);
+printf("%ld, ", first);
+printf("%ld, ", second);
 for (num = 0; num < 48; num++)
 {
 next = first + second;
-printf(", %d", next);
+printf(", %ld", next);
 first = second;
 second = next;
 }
