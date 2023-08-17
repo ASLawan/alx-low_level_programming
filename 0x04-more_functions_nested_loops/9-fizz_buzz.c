@@ -13,23 +13,26 @@ int main(void)
 	char str2[] = "Fizz";
 	char str3[] = "Buzz";
 
-	for (i = 1; i <= 100; i++)
+	i = 1;
+	printf("%d", i);
+
+	for (i = 2; i <= 100; i++)
 	{
 		if (i % 5 == 0 && i % 3 == 0)
 		{
-			printf("%s ", str1);
+			printf(" %s", str1);
 		}
 		else if (i % 5 == 0)
 		{
-			printf("%s ", str3);
+			printf(" %s", str3);
 		}
 		else if (i % 3 == 0)
 		{
-			printf("%s ", str2);
+			printf(" %s", str2);
 		}
 		else
 		{
-			printf("%d ", i);
+			printf(" %d", i);
 		}
 	}
 	return (0);
