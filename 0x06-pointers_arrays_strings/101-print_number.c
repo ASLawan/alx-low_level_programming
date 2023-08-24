@@ -23,7 +23,7 @@ void print_number(int n)
 	}
 
 	j = i;
-       k = 1;
+	k = 1;
 
 	while (j > 9)
 	{
