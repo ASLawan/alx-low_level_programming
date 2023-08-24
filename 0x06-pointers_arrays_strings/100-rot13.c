@@ -10,34 +10,22 @@
 
 char *rot13(char *s)
 {
-	int i, rot;
+	int count = 0, i;
+	char alphabet[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char rot13[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
-	rot  = 13;
-	for (i = 0; s[i] != '\0'; i++)
+	while (*(s + count) != '\0')
 	{
-		if (s[i] >= 'a' && s[i] <= 'z')
+		for (i = 0; i < 52; i++)
 		{
-			if ((s[i] + rot) <= 122)
+			if (*(s + count) == alphabet[i])
 			{
-				s[i] += rot;
-			}
-			else
-			{
-				s[i] -= rot;
+				*(s + count) = rot13[i];
+				break;
 			}
 		}
-		if (s[i] >= 'A' && s[i] <= 'Z')
-		{
-			if ((s[i] + rot) <= 90)
-			{
-				s[i] += rot;
-			}
-			else
-			{
-				s[i] -= rot;
-			}
-		}
-
+		count++;
 	}
+
 	return (s);
 }
