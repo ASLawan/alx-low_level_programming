@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * *rot13 - shift character 13 places
+ * *rot13 - rotate character 13 places
  *
  * @s: input string
  *
