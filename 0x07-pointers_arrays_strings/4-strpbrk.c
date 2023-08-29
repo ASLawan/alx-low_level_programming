@@ -11,20 +11,15 @@
 
 char *_strpbrk(char *s, char *accept)
 {
-const char *p1 = s, *p2;
+	unsigned int i, j;
 
-while (*p1 != '\0')
-{
-p2 = accept;
-while (*p2 != '\0')
-{
-if (*p1 == *p2)
-{
-return ((char *)p1);
-}
-p2++;
-}
-p1++;
-}
-return ("NULL");
+	for (i = 0; *(s + i) != '\0'; i++)
+	{
+		for (j = 0; *(accept + j) != '\0'; j++)
+		{
+			if (*(s + i) == *(accept + j))
+				return (s + i);
+		}
+	}
+	return ('\0');
 }
