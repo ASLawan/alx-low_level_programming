@@ -1,25 +1,4 @@
 #include "main.h"
-
-/**
- * is_palindrome - checks if a string is palindrome
- *
- * @s: string to check
- *
- * Return: 1 if true and 0 otherwise
- */
-
-int is_palindrome(char *s)
-{
-	if (*s == '\0')
-	{
-		return (1);
-	}
-	else
-	{
-		return (strncompare(s, 0, stringLen(s) - 1));
-	}
-}
-
 /**
  * stringLen - computes string length
  *
@@ -66,3 +45,24 @@ int strncompare(char *s, int i, int j)
 	}
 	return (0);
 }
+/**
+ * is_palindrome - checks if a string is palindrome
+ *
+ * @s: string to check
+ *
+ * Return: 1 if true and 0 otherwise
+ */
+
+int is_palindrome(char *s)
+{
+	if (*s == '\0')
+	{
+		return (1);
+	}
+	else
+	{
+		return (strncompare(s, 0, stringLen(s) - 1));
+	}
+}
+
+
