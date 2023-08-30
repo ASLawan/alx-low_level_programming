@@ -13,5 +13,6 @@ int _putchar(char c);
 /*helpter functions*/
 int sqrtTest(int n, int k);
 int square(int x);
+int isPrime(int n, int i);
 
 #endif
