@@ -43,8 +43,7 @@ int main(int argc, char *argv[])
 		{
 			cents -= 1;
 		}
-		
-		numCoins += 1; 
+		numCoins += 1;
 	}
 	printf("%d\n", numCoins);
 	return (0);
