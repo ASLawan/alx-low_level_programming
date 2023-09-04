@@ -24,7 +24,16 @@ char *str_concat(char *s1, char *s2)
 		s2 = "";
 	}
 	ptr = malloc(strlen(s1) + strlen(s2) + 1);
-	strcpy(ptr, s1);
-	strcat(ptr, s2);
+
+	if (ptr == NULL)
+	{
+		free(ptr);
+		return (NULL);
+	}
+	else
+	{
+		strcpy(ptr, s1);
+		strcat(ptr, s2);
+	}
 	return (ptr);
 }
