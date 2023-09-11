@@ -1,6 +1,7 @@
 #ifndef HEADER_FILE
 #define HEADER_FILE
 
+
 /**
  * struct dog - dog strcuture
  * @name: name member
@@ -17,5 +18,6 @@ struct dog
 	char *owner;
 };
 
+void init_dog(struct dog *d, char *name, float age, char *owner);
 
 #endif
