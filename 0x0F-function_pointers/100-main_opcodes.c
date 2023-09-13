@@ -31,7 +31,11 @@ int main(int argc, char *argv[])
 
 	for (i = 0; i < num_bytes; i++)
 	{
-		printf("%02x ", func_ptr[i]);
+		printf("%02x", func_ptr[i] & 0xFF);
+		if (i != num_bytes - 1)
+		{
+			printf(" ");
+		}
 	}
 	printf("\n");
 
