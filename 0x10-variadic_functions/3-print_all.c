@@ -37,17 +37,15 @@ void print_all(const char * const format, ...)
 				{
 					printf("(nil)");
 				}
-				else
-				{
-					printf("%s", str);
-				}
+				printf("%s", str);
 				break;
 			case 'f':
 				decimal = va_arg(arguments, double);
 				printf("%f", decimal);
 				break;
 		}
-		if ((format[i] == 'c' || format[i] == 'i' || format[i] == 'f' || format[i] == 's') && (format[i] != '\0'))
+		if ((format[i] == 'c' || format[i] == 'i' || format[i] == 'f'\
+				 || format[i] == 's') && (format[i] != '\0'))
 		{
 			printf(", ");
 		}
