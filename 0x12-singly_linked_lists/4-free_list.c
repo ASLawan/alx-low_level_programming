@@ -11,20 +11,15 @@ void free_list(list_t *head)
 {
 	/*declare a temporal node, use it to traverse and free the list */
 	list_t *temp;
-	list_t *next;
 
 	temp = head;
 
-	/*check if list is empty*/
-	if (head == NULL)
-	{
-		return;
-	}
-
 	while (temp != NULL)
 	{
-		next = temp->next;
+		temp = temp->next;
+		free(temp->str);
 		free(temp);
-		temp = next;
 	}
+
+
 }
