@@ -1,12 +1,12 @@
 #ifndef LISTS_H
 #define LISTS_H
 
-/*header files*/
+/**************header files*****************/
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-/*struct*/
+/***************structs**********************/
 
 /**
 * struct listint_s - singly linked list
@@ -23,7 +23,20 @@ int n;
 struct listint_s *next;
 } listint_t;
 
-/*function prototypes*/
+/**
+* struct ptrs_s - singly linked list struct
+* @p: node pointers
+* @next: links to next node
+* Description: linked list of pointers
+*/
+
+typedef struct ptrs_s
+{
+void *p;
+struct ptrs_s *next;
+} ptrs_t;
+
+/*****************function prototypes*********************/
 int _putchar(char c);
 size_t print_listint(const listint_t *h);
 size_t listint_len(const listint_t *h);
