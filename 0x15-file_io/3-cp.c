@@ -1,12 +1,11 @@
 #include "main.h"
-
+#define BUFFER 1024
 /**
  * main - program to copy from one file to another
  * @argc: number of arguments
  * @argv: array of arguments
  * Return: new file on success
  */
-#define BUFFER 1024
 int main(int argc, char *argv[])
 {
 	int s_fd, d_fd, bytes_rd, bytes_ptd;
