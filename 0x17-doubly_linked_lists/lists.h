@@ -2,7 +2,8 @@
 #define LISTS_H
 
 /**** HEADER FILES ****/
-
+#include <stdlib.h>
+#include <stdio.h>
 
 /**** STRUCTURE *****/
 
