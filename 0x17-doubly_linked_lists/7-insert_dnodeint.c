@@ -38,11 +38,11 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	}
 	else if (idx == 1)
 	{
-		add_dnodeint(h, n);
+		new = add_dnodeint(h, n);
 	}
 	else if (idx == len - 1)
 	{
-		add_dnodeint_end(h, n);
+		new = add_dnodeint_end(h, n);
 	}
 
 	new = (dlistint_t *)malloc(sizeof(dlistint_t));
