@@ -21,7 +21,7 @@ def island_perimeter(grid):
             if i == 1:
                 row_width += 1
         h_counted = False
-        if w_count < row_width:
+        if w_count <= row_width:
             w_count = row_width
 
     if w_count > 100:
